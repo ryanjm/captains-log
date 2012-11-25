@@ -1,0 +1,18 @@
+<header>
+  <h1>New Log</h1>
+</header>
+
+{{#life_log}}
+<article>
+  <form action='/create' method='post'>
+    <textarea id='js-log-body' name='log_entry[body]' rows="7" cols="50">{{body}}</textarea>
+    <br/>
+    <input type="submit" value="Save" />
+  </form>
+  <div id="js-preview" class="markdown"> 
+  </div>
+</article>
+
+{{/life_log}}
+
+

@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  width: 800px;
+}
+
+p {
+  margin: 0.9em 0;
+  line-height: 1.3em;
+}
+
+textarea {
+  padding: 3px 6px;
+}
+
+form {
+  float: left;
+  width: 400px;
+}
+
+.markdown {
+  background-color: rgb(241,241,241);
+  padding: 7px;
+  border: 1px solid rgb(220,220,220);
+  font-family: Helvetica;
+  font-size: 14px;
+}
+
+.markdown h1 {
+  font-size: 18px;
+}
+
+.markdown ul, .markdown ol {
+  margin: 8px 20px;
+}
+#js-preview {
+  width: 370px;
+  float: left;
+}
+
+.meta-data {
+  font-size: 12px;
+}
+
+.meta-data p {
+  margin: 1px 0;
+}
