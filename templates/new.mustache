@@ -4,13 +4,18 @@
 
 {{#life_log}}
 <article>
-  <form action='/create' method='post'>
+
+<form action='/create' method='post'>
+  <div class="expanding-area">
+    <pre><span></span><br></pre>
     <textarea id='js-log-body' name='log_entry[body]' rows="7" cols="50">{{body}}</textarea>
-    <br/>
-    <input type="submit" value="Save" />
-  </form>
-  <div id="js-preview" class="markdown"> 
   </div>
+  <br/>
+  <input type="submit" value="Save" />
+</form>
+<div id="js-preview" class="markdown"> 
+</div>
+
 </article>
 
 {{/life_log}}

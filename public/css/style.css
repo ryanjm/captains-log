@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  /* outline: 0; */
+  /* border: 0; */
 }
 
 .center {
@@ -17,13 +19,56 @@ p {
   line-height: 1.3em;
 }
 
-textarea {
-  padding: 3px 6px;
-}
-
 form {
   float: left;
   width: 400px;
+}
+
+.expanding-area {
+  position: relative;
+  width: 350px;
+  min-height: 75px;
+}
+
+.expanding-area > textarea,
+.expanding-area > pre {
+  padding: 3px 6px;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: helvetica;
+}
+
+.expanding-area > textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  /* This height is used when JS is disabled */
+  height: 100px;
+}
+.expanding-area.active > textarea {
+  /* Hide any scrollbars */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Remove WebKit user-resize widget */
+  resize: none;
+}
+.expanding-area > pre {
+  display: none;
+  white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word; 
+}
+.expanding-area.active > pre {
+  display: block;
+  /* Hide the text; just using it for sizing */
+  visibility: hidden;
 }
 
 .markdown {
@@ -41,6 +86,7 @@ form {
 .markdown ul, .markdown ol {
   margin: 8px 20px;
 }
+
 #js-preview {
   width: 370px;
   float: left;
